@@ -66,6 +66,9 @@ yarn-error.log
 # testing
 /coverage
 
+# env
+.env
+
 # Yarn
 .yarn/*
 !.yarn/patches
@@ -73,3 +76,5 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+# react-native-config codegen
+ios/tmp.xcconfig
