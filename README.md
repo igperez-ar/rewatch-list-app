@@ -1,97 +1,93 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Rewatch List App
 
-# Getting Started
+A modern, cross-platform React Native application for managing and tracking movies you want to rewatch. Built with a focus on maintainability, scalability, and developer experience, this project leverages best practices such as Atomic Design for UI, Hexagonal Architecture for business logic, and a modular, type-safe codebase.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## ✨ Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- **Movie Watchlist**: Add, update, and remove movies from your personal rewatch list.
+- **Movie Details**: View and edit details, including ratings and genres.
+- **Genre Management**: Browse and select genres for your movies.
+- **Persistent Storage**: Data is managed via Supabase for real-time, cloud-based persistence.
+- **Responsive UI**: Consistent experience across Android and iOS, with custom fonts and theming.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
+
+## 🏗️ Architecture & Best Practices
+
+### Hexagonal Architecture (Ports & Adapters)
+- **Domain Logic**: All business rules are isolated in the `domain` layer, making them framework-agnostic and easily testable.
+- **Adapters**: Infrastructure (e.g., Supabase, mocks) is injected via adapters, allowing for easy swapping and mocking in tests.
+- **Use Cases**: Application-specific workflows are encapsulated in use-case classes, promoting single responsibility and clarity.
+
+### Atomic Design for UI
+- **Atoms**: Smallest UI components (e.g., `Text`, `Box`, `Icon`).
+- **Molecules**: Combinations of atoms (e.g., `Dropdown`, `Header`, `Input`).
+- **Templates**: Layout scaffolds (e.g., `GradientContainer`, `MainContainer`).
+- **Screens**: Full pages composed of templates, molecules, and atoms.
+
+### Type Safety & Testing
+- **TypeScript**: End-to-end type safety, including custom types for Supabase and global app types.
+- **Unit & Integration Tests**: Located alongside use-cases and screens, with fixtures and mocks for reliable, isolated testing.
+
+### State Management & Theming
+- **Redux Toolkit**: Modular state slices for configuration and app state.
+- **Theming**: Centralized theme management for consistent look and feel.
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+  app/           # App entry, theme, global types
+  core/          # Business logic (hexagonal architecture)
+    capabilities/
+      movies/    # Movie domain, use-cases, adapters, repository
+      genres/    # Genre domain, use-cases, adapters, repository
+  presentation/  # UI (atomic design: atoms, molecules, templates, screens)
+  shared/        # Shared enums, constants, types, utilities
+  testing/       # Test fixtures, mocks, and utils
+lib/
+  supabase/      # Supabase instance and generated types
+```
+
+---
+
+## 🚀 Getting Started (with Yarn)
+
+### 1. Install Dependencies
 
 ```sh
-# Using npm
-npm start
+yarn install
+```
 
-# OR using Yarn
+### 2. Set Up Native Dependencies
+
+#### iOS (first time or after native dependency changes)
+```sh
+cd ios
+bundle install
+bundle exec pod install
+cd ..
+```
+
+### 3. Start Metro Bundler
+
+```sh
 yarn start
 ```
 
-## Step 2: Build and run your app
+### 4. Run the App
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
+#### Android
 ```sh
-# Using npm
-npm run android
-
-# OR using Yarn
 yarn android
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
+#### iOS
 ```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
