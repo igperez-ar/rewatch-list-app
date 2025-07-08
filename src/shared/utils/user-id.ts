@@ -1,7 +1,8 @@
-/* import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import 'react-native-get-random-values';
 import { v4 as uuidv4 } from 'uuid';
 
-const USER_ID_KEY = 'user_id'; */
+const USER_ID_KEY = 'user_id';
 
 /**
  * Gets or creates a user ID for the application.
@@ -13,11 +14,10 @@ const USER_ID_KEY = 'user_id'; */
  * @returns Promise<string> - The user ID (currently hardcoded)
  */
 export const getOrCreateUserId = async (): Promise<string> => {
-  return 'b0f1a7b4-97fa-4f9e-b00f-28111fd2b1c1';
-  /* let userId = await AsyncStorage.getItem(USER_ID_KEY);
+  let userId = await AsyncStorage.getItem(USER_ID_KEY);
   if (!userId) {
-    userId = uuidv4();
+    userId = /* uuidv4() */'b0f1a7b4-97fa-4f9e-b00f-28111fd2b1c1';
     await AsyncStorage.setItem(USER_ID_KEY, userId);
   }
-  return userId; */
+  return userId;
 };
