@@ -10,6 +10,7 @@ type DropdownProps<T> = {
   onPress?: (item: T) => void;
   labelExtractor: (item: T) => string;
   keyExtractor: (item: T) => string;
+  testID?: string;
 };
 
 export const Dropdown = <T,>({
@@ -20,6 +21,7 @@ export const Dropdown = <T,>({
   onPress,
   labelExtractor,
   keyExtractor,
+  testID = 'dropdown_input',
 }: DropdownProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,7 +37,10 @@ export const Dropdown = <T,>({
           {label}
         </Text>
       ) : null}
-      <TouchableOpacity onPress={() => setIsOpen(open => !open)}>
+      <TouchableOpacity
+        onPress={() => setIsOpen(open => !open)}
+        testID={testID}
+      >
         <Box
           flexDirection="row"
           alignItems="center"
@@ -65,7 +70,10 @@ export const Dropdown = <T,>({
             data={data}
             keyExtractor={keyExtractor}
             renderItem={({ item }) => (
-              <TouchableOpacity onPress={() => handlePress(item)}>
+              <TouchableOpacity
+                onPress={() => handlePress(item)}
+                testID={`${testID}_item_${keyExtractor(item)}`}
+              >
                 <Box
                   p="md-plus"
                   backgroundColor={item === value ? 'surface' : 'background'}

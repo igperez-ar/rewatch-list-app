@@ -34,6 +34,7 @@ export const MovieDetailScreen: React.FC<MovieDetailScreenProps> = props => {
               onChangeText={text =>
                 setMovieState(prev => ({ ...prev, title: text }))
               }
+              testID='title_input'
             />
           </Box>
           <Box flex={1}>
@@ -48,6 +49,7 @@ export const MovieDetailScreen: React.FC<MovieDetailScreenProps> = props => {
                   rewatch_count: text ? parseInt(text) : 0,
                 }));
               }}
+              testID='rewatch_count_input'
             />
           </Box>
         </Box>
@@ -59,6 +61,7 @@ export const MovieDetailScreen: React.FC<MovieDetailScreenProps> = props => {
             onChangeText={text =>
               setMovieState(prev => ({ ...prev, comment: text }))
             }
+            testID='comment_input'
           />
         </Box>
         <Box mb="lg-plus">
@@ -85,6 +88,7 @@ export const MovieDetailScreen: React.FC<MovieDetailScreenProps> = props => {
           onPress={saveMovie}
           disabled={!isValid}
           style={{ opacity: isValid ? 1 : 0.5 }}
+          testID='save_button'
         >
           <Box
             backgroundColor="secondary"
@@ -99,7 +103,7 @@ export const MovieDetailScreen: React.FC<MovieDetailScreenProps> = props => {
           </Box>
         </TouchableOpacity>
         {hasId(movieState) ? (
-          <TouchableOpacity onPress={deleteMovie}>
+          <TouchableOpacity onPress={deleteMovie} testID='delete_button'>
             <Box
               backgroundColor="error"
               borderRadius={8}

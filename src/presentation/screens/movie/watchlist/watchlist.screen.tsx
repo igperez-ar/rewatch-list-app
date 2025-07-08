@@ -7,17 +7,13 @@ import {
   Text,
   TouchableOpacity,
 } from '@components/index';
-import type { ScreenProps } from '@core/infrastructure/navigation/navigation.types';
 import { ActivityIndicator, FlatList } from 'react-native';
 import { ICON_RATING_MAP } from 'src/shared/constants';
-import { MovieRoutesEnum } from 'src/shared/enums/routes';
 import { useWatchlistPresenter } from './watchlist.presenter';
+import { WatchlistScreenProps } from './watchlist.types';
 
-export const WatchlistScreen: React.FC<
-  ScreenProps<MovieRoutesEnum.WATCHLIST>
-> = props => {
-  const { movieState, goToEdition, goToCreation } =
-    useWatchlistPresenter(props);
+export const WatchlistScreen: React.FC<WatchlistScreenProps> = props => {
+  const { movieState, goToEdition, goToCreation } = useWatchlistPresenter(props);
 
   const renderContent = () => {
     if (movieState.loading) {
@@ -46,7 +42,7 @@ export const WatchlistScreen: React.FC<
           showsVerticalScrollIndicator={false}
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => goToEdition(item)}>
+            <TouchableOpacity onPress={() => goToEdition(item)} testID='movie_list_item'>
               <Box flexDirection="row" alignItems="center">
                 <Icon name={ICON_RATING_MAP[item.rating].icon} size={20} />
                 <Box justifyContent="center" marginVertical="xs" pl="lg">
@@ -78,7 +74,7 @@ export const WatchlistScreen: React.FC<
   return (
     <MainContainer header={<Header title="My movies" />}>
       <Box flex={1}>{renderContent()}</Box>
-      <TouchableOpacity onPress={goToCreation}>
+      <TouchableOpacity onPress={goToCreation} testID="add_movie_btn">
         <Box
           position="absolute"
           overflow="hidden"

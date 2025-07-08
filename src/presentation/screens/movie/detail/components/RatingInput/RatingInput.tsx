@@ -5,9 +5,10 @@ import { ICON_RATING_MAP } from 'src/shared/constants';
 type RatingInputProps = {
   value: number;
   onPress: (value: number) => void;
+  testID?: string;
 };
 
-export const RatingInput: React.FC<RatingInputProps> = ({ value, onPress }) => {
+export const RatingInput: React.FC<RatingInputProps> = ({ value, onPress, testID = 'rating_input' }) => {
   return (
     <>
       <Text variant="label">Rating</Text>
@@ -30,6 +31,7 @@ export const RatingInput: React.FC<RatingInputProps> = ({ value, onPress }) => {
             <TouchableOpacity
               style={{ flex: 1 }}
               onPress={() => onPress(index)}
+              testID={`${testID}_item_${index}`}
             >
               <Box alignItems="center" opacity={index === value ? 1 : 0.3}>
                 <Icon name={item.icon} size={24} />
