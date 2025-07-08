@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-RewatchList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-RewatchList.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		33D2516C81BE48D7BEF6B8E4 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFC9ABADA177423481937AC6 /* Nunito-Bold.ttf */; };
+		40B8D86A2A794323BBD4738D /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C92AFF0141954980AF52C128 /* Nunito-Medium.ttf */; };
+		55BA6A58A9AA43058143887F /* Bukhari-Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C42876FE26D4CCB839A92D4 /* Bukhari-Script.ttf */; };
+		72CE2539A30E4DF888BC27F5 /* Cascadia-Mono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBCBE591FFDF4ABCA16ED782 /* Cascadia-Mono-Bold.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		80C20E0B67BC450A94C5C26C /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75E0A8F76D404DBD86B25E38 /* Nunito-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A5B468B9E16344D291A1C752 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 222FE3E36DDC4B8A822B7919 /* Config.xcconfig */; };
 		EA3814AEF4CBDA935654B8C8 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		EBAEA2DE03EA42ADA4B8AB96 /* Cascadia-Mono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 359E6ECE99304997B60A301E /* Cascadia-Mono-Medium.ttf */; };
+		FB81A0D8F43847E3B518B1EE /* Cascadia-Mono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 681E59203F034E8A88B8A4D8 /* Cascadia-Mono-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +28,19 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RewatchList/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = RewatchList/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		222FE3E36DDC4B8A822B7919 /* Config.xcconfig */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		359E6ECE99304997B60A301E /* Cascadia-Mono-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Cascadia-Mono-Medium.ttf"; path = "../assets/fonts/Cascadia-Mono-Medium.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-RewatchList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewatchList.debug.xcconfig"; path = "Target Support Files/Pods-RewatchList/Pods-RewatchList.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-RewatchList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewatchList.release.xcconfig"; path = "Target Support Files/Pods-RewatchList/Pods-RewatchList.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-RewatchList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RewatchList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		681E59203F034E8A88B8A4D8 /* Cascadia-Mono-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Cascadia-Mono-Regular.ttf"; path = "../assets/fonts/Cascadia-Mono-Regular.ttf"; sourceTree = "<group>"; };
+		75E0A8F76D404DBD86B25E38 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = RewatchList/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RewatchList/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C42876FE26D4CCB839A92D4 /* Bukhari-Script.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Bukhari-Script.ttf"; path = "../assets/fonts/Bukhari-Script.ttf"; sourceTree = "<group>"; };
+		BBCBE591FFDF4ABCA16ED782 /* Cascadia-Mono-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Cascadia-Mono-Bold.ttf"; path = "../assets/fonts/Cascadia-Mono-Bold.ttf"; sourceTree = "<group>"; };
+		C92AFF0141954980AF52C128 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Medium.ttf"; path = "../assets/fonts/Nunito-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EFC9ABADA177423481937AC6 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				C63E0C319ACD437BA50D0061 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -99,6 +114,21 @@
 				5709B34CF0A7D63546082F79 /* Pods-RewatchList.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C63E0C319ACD437BA50D0061 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C42876FE26D4CCB839A92D4 /* Bukhari-Script.ttf */,
+				BBCBE591FFDF4ABCA16ED782 /* Cascadia-Mono-Bold.ttf */,
+				359E6ECE99304997B60A301E /* Cascadia-Mono-Medium.ttf */,
+				681E59203F034E8A88B8A4D8 /* Cascadia-Mono-Regular.ttf */,
+				EFC9ABADA177423481937AC6 /* Nunito-Bold.ttf */,
+				C92AFF0141954980AF52C128 /* Nunito-Medium.ttf */,
+				75E0A8F76D404DBD86B25E38 /* Nunito-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +195,13 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				EA3814AEF4CBDA935654B8C8 /* PrivacyInfo.xcprivacy in Resources */,
+				55BA6A58A9AA43058143887F /* Bukhari-Script.ttf in Resources */,
+				72CE2539A30E4DF888BC27F5 /* Cascadia-Mono-Bold.ttf in Resources */,
+				EBAEA2DE03EA42ADA4B8AB96 /* Cascadia-Mono-Medium.ttf in Resources */,
+				FB81A0D8F43847E3B518B1EE /* Cascadia-Mono-Regular.ttf in Resources */,
+				33D2516C81BE48D7BEF6B8E4 /* Nunito-Bold.ttf in Resources */,
+				40B8D86A2A794323BBD4738D /* Nunito-Medium.ttf in Resources */,
+				80C20E0B67BC450A94C5C26C /* Nunito-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
